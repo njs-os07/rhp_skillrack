@@ -25,8 +25,7 @@ public class dynamic_matrix_column {
             long fsmax[] = getFSMax(dp, col - 1, R);
 
             for (int row = 0; row < R; row++) {
-                dp[row][col] = grid[row][col]
-                        + (dp[row][col - 1] == fsmax[0]? fsmax[1]:fsmax[0]);
+                dp[row][col] = grid[row][col]+(dp[row][col - 1] == fsmax[0]? fsmax[1]:fsmax[0]);
             }
         }
 
